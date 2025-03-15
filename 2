@@ -1,0 +1,6 @@
+- name: setup module
+  hosts:
+  tasks:
+   - name: debug
+     debug:
+       msg: "the hostname is {{ansible_hostname}}"
