@@ -1,0 +1,11 @@
+- name: printing fact_variable
+  hosts: target1
+  tasks:
+   - name: os
+     debug:
+       msg: |
+         "the os_family is {{ansible_os_family}}"
+         "the os_name is {{ansible_distribution}}"
+         "the os_version is {{ansible_distribution}}"
+         "the os_kernal is {{ansible_kernel}}"
+         "the os_architecture is {{ansible_architecture}}"
