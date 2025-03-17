@@ -1,8 +1,0 @@
-- name: distribution
-  hosts: target1
-  tasks:
-   - name: task2
-     debug:
-       msg: |
-         "The hostname is {{ansible_hostname}}"
-         "The os version is {{ansible_distribution_version}}"
