@@ -1,0 +1,14 @@
+---
+- name: Create a user on multiple servers
+  hosts: all
+  become: true  # Ensures the playbook runs with sudo permissions
+  tasks:
+    - name: Ensure the user exists
+      user:
+        name: gokul        # The username you want to create
+        state: present      # Ensures the user is present
+        shell: /bin/bash    # Set the default shell
+        comment: "User for both servers" # Optional: Add a comment to the user
+        create_home: yes    # Ensures the home directory is created
+        home: "/home/gokul" # Optional: Specify home directory (default is `/home/username`)
+        password: "{{ 'asd123.' | password_hash('sha512') }}"  # Using SHA-512 to hash the password
