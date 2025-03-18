@@ -1,0 +1,7 @@
+- name: copy
+  hosts: target2
+  tasks:
+  - name: to copy
+    template:
+      src: 1.j2
+      dest: /home/binzy/
