@@ -1,0 +1,9 @@
+---
+- name: Copy file from local machine to multiple servers
+  hosts: all  
+  tasks:
+    - name: Copy file to remote servers
+      ansible.builtin.copy:
+        src: /home/synnefo/Downloads/PDF.pdf 
+        dest: /home/binzy/PDF.pdf  
+        mode: '0644' 
