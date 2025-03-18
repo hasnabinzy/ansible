@@ -1,0 +1,18 @@
+---
+- name: Run commands as a specific user
+  hosts: all
+  vars:
+    ansible_user: binzy
+    ansible_ssh_pass: "asd123."
+  tasks:
+    - name: List files in /home directory using find module
+      find:
+        path: /home/
+        recurse: yes
+        file_type: directory
+      register: result 
+
+    - name: Show the list of files found
+      debug:
+        var: result.files 
+
