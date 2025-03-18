@@ -1,0 +1,6 @@
+{{ansible_distribution}}
+{{ansible_os_family}}
+ansible_host
+ansible_processor
+ansible_kernel
+ansible_peocessor_core
