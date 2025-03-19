@@ -1,4 +1,4 @@
-- name: hsotvars & groupvars
+- name: hostvars & groupvars
   hosts: target2
   tasks:
   - name: installing package
