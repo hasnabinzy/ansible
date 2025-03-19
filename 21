@@ -1,0 +1,16 @@
+- name: hostvars & groupvars
+  hosts: group2
+  tasks:
+  - name: installing package
+    ansible.builtin.apt:
+      name: "{{a}}"
+      state: present
+  - name: enabling & starting service
+    ansible.builtin.service:
+      name: "{{b}}"
+      enabled: yes
+      state: started
+  - name: copy files
+    ansible.builtin.copy:
+      src: index.html
+      dest: "{{c}}"
