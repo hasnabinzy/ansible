@@ -1,0 +1,11 @@
+- name: setting list
+  hosts: target2
+  tasks:
+  - name: installing
+    dnf:
+      name: "{{item}}"
+      state: present
+    loop:
+    - httpd
+    - vim
+    - tree
